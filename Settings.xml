@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<settings>
+
+    <!-- Real-Debrid Section -->
+    <category label="Real-Debrid">
+        <setting id="rd.enabled" type="bool" label="Enable Real-Debrid" default="true"/>
+        <setting id="rd.auth" type="action" label="Login to Real-Debrid" action="RunPlugin(plugin://plugin.video.slyfox/?action=rd_auth)"/>
+        <setting id="rd.account" type="action" label="View RD Account Info" action="RunPlugin(plugin://plugin.video.slyfox/?action=rd_account)"/>
+        <setting id="rd.history" type="action" label="View RD Torrent History" action="RunPlugin(plugin://plugin.video.slyfox/?action=rd_history)"/>
+    </category>
+
+    <!-- Scraping Section -->
+    <category label="Scraping">
+        <setting id="scrape.timeout" type="number" label="Scrape Timeout (seconds)" default="20" min="5" max="60" step="1"/>
+        <setting id="scrape.limit" type="number" label="Max Results to Keep" default="50" min="10" max="200" step="10"/>
+        <setting id="scrape.filter_rd" type="bool" label="Filter Only Real-Debrid Sources" default="true"/>
+    </category>
+
+    <!-- Preloading Section -->
+    <category label="Next Episode Preloading">
+        <setting id="preload.enabled" type="bool" label="Enable Next Episode Preloading" default="true"/>
+        <setting id="preload.threshold" type="number" label="Preload Trigger (%)" default="80" min="50" max="95" step="5"/>
+    </category>
+
+    <!-- Debug Section -->
+    <category label="Debug">
+        <setting id="debug.logging" type="bool" label="Enable Debug Logging" default="false"/>
+        <setting id="debug.clear_cache" type="action" label="Clear Cached Preload Data" action="RunPlugin(plugin://plugin.video.slyfox/?action=clear_cache)"/>
+    </category>
+
+</settings>
