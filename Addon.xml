@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<addon id="plugin.video.slyfox"
+       name="SlyFox"
+       version="1.0.0"
+       provider-name="SlyFox">
+    <requires>
+        <import addon="xbmc.python" version="3.0.0"/>
+    </requires>
+
+    <extension point="xbmc.python.pluginsource" library="lib/router.py">
+        <provides>video</provides>
+    </extension>
+
+    <extension point="xbmc.addon.metadata">
+        <summary>SlyFox: TMDBHelper Player + CocoScrapers + Real-Debrid</summary>
+        <description>
+            Lightweight Kodi addon for scraping and resolving Real-Debrid links via TMDBHelper.
+            Supports next-episode preloading, RD source picker, and full TMDBHelper Player API.
+        </description>
+        <platform>all</platform>
+        <icon>resources/media/icon.png</icon>
+        <fanart>resources/media/fanart.jpg</fanart>
+        <type>video</type>
+        <language>en</language>
+        <license>MIT</license>
+        <source>https://github.com/bartleby999/plugin.video.slyfox</source>
+    </extension>
+</addon>
